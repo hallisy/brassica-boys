@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="header">
+  <a routerLink="/posts"><h1>
+    {{ title }}
+  </h1></a>
+  <div class="sub">
+  	{{slogan}} 
+	</div>
+</div>
+<nav>
+  <!--<a routerLink="/popular">Most Popular</a>-->
+  <a routerLink="/posts">Recent Posts</a>
+</nav>
+<div class="row">
+	<div class="rightcolumn">
+		<app-authors></app-authors>
+	</div>
+	<div class="leftcolumn">
+		<router-outlet></router-outlet>
+	</div>
+
+</div>
+</body>

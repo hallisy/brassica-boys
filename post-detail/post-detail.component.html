@@ -1,0 +1,38 @@
+<div *ngIf= "post" class="display">
+
+	<h2>{{ post.title | uppercase }}</h2>
+<!-- change to autofill with current user.name-->	
+	<div class="image">  
+		<img src={{post.pic}} alt="PostPic" style="width:100%">
+	</div>
+	<div><h3><span> Written by: </span>{{post.author}}</h3></div>
+	<div><h3><span> Date: </span>{{post.date}}</h3></div>
+	<div><h3><span>&emsp;</span>{{post.body}}</h3></div>
+	<br>
+<!--Outside link-->
+	<div *ngIf="post.link"><a href="{{post.link}}">Relevant link(leaving Brassica Boys)</a></div>
+<!--Embedded spotify player-->
+	<div *ngIf="post.embed"><iframe src="{{post.embed}}" width="300" height="380" frameborder="0" allowtransparency="false" allow="encrypted-media"></iframe></div>
+
+  <div *ngIf="post"><a routerLink="/edit">Edit Post</a></div>
+	<br><br><br>
+	<div>
+		<span>COMING SOON: Related Posts</span>
+	</div>
+	<!-- change permission level after login implementation-->
+	<div>
+    <label>title:
+      <input [(ngModel)]="post.title" placeholder="Artist -- Title">
+    </label>
+	  <label>image link:
+      <input [(ngModel)]="post.pic" placeholder="file link">
+    </label>
+    <label>body:
+      <input [(ngModel)]="post.body" placeholder="post body">
+    </label>
+    <button (click)="save()">save</button>
+	</div>
+	
+	<button (click)="goBack()">go back</button>
+
+</div>

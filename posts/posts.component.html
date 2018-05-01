@@ -1,0 +1,32 @@
+<!--Template for posts -->
+
+<h2 style="font-weight: 600;">Recent Posts</h2>
+<!-- card notation -->
+
+    <div *ngFor="let post of posts" class="card" routerLink="/detail/{{post.title}}">
+      <h2 style="font-weight: 400;">{{post.title}}</h2>
+    	
+	    <div class="image">  
+	      <img src={{post.pic}} alt="PostPic" style="width:80%">
+	      <div *ngIf= "post.likes" class="likes">
+	    		<div class="lText">Ups: {{post.likes}}</div>
+	  		</div>
+  		</div>
+      <div class="container">
+	      <h5>By {{post.author}}
+	      	<div *ngIf= "post.date" class="date"> {{post.date}}</div>
+	      </h5>
+	    </div>  
+    </div>
+   
+
+<!--<div><span> Author: </span>{{post.author}}</div> 
+<!-- change to current date-->
+<!--<div><span> Date: </span>{{post.date}}</div> 
+<!--<div> file selector for image </div>-->
+<!--<div>
+	<label>Body:
+		<input [(ngModel)]= "post.body" placeholder = "body">
+	</label>	
+<div><span> Ups: </span>{{post.likes}}</div>
+-->

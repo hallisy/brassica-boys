@@ -1,0 +1,82 @@
+/* Uncategorized text*/
+body {
+	font-family: Times;
+  padding: 20px;
+  background: #84e184;
+}
+
+/* Cutoff text that's too long */
+div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Header/Blog Title */
+.header {
+  padding: 15px;
+  font-size: 36px;
+  text-align: center;
+  background: white;
+  font-family: Helvetica, sans-serif !important;
+  font-weight:600;
+  letter-spacing: 4px;
+  color: black;
+  /*#231f20;*/
+  text-transform: lowercase;
+  text-decoration: underline;
+  text-shadow: 1px 2px green;
+}
+
+.header .sub {
+	font-size: 12px;
+  text-align: center;
+  text-decoration: italic;
+  text-shadow: 0px 0px green;
+}
+
+/* Two columns to hold posts and additional info*/
+.leftcolumn {
+	float: left;
+  width: 70%;
+}
+
+.rightcolumn {
+  float: right;
+  width: 25%;
+  padding-left: 15px;
+}
+
+/* Picture wrapper div */ 
+.image {
+  position: relative;
+  opacity: 1;
+  padding: 20px;
+  display: block;
+  transition: .3s ease;
+  backface-visibility: hidden;
+  z-index: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Adjust columns to single column for small screens */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn { 
+    width: 100%;
+    padding: 0;
+  }
+}
